@@ -1,0 +1,49 @@
+{
+  "restaurant": {
+    "name": "Cafe Rose",
+    "nameFa": "کافه رز",
+    "phone": "021-12345678",
+    "address": "تهران، خیابان ولیعصر",
+    "logo": "/assets"
+  },
+  "categories": [
+    { "id": "coffee", "name": "Coffee", "nameFa": "قهوه" },
+    { "id": "tea", "name": "Tea", "nameFa": "چای" },
+    { "id": "dessert", "name": "Desserts", "nameFa": "دسر" }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "categoryId": "coffee",
+      "name": "Espresso",
+      "nameFa": "اسپرسو",
+      "price": 95000,
+      "description": "تک شات اسپرسوس.",
+      "image": "/assets/images/",
+      "available": true,
+      "tags": ["قهوه", "داغ"]
+    },
+    {
+      "id": "p2",
+      "categoryId": "coffee",
+      "name": "Cappuccino",
+      "nameFa": "کاپوچینو",
+      "price": 120000,
+      "description": "اسپرسو همراه با شیر داغ.",
+      "image": "/assets/images",
+      "available": true,
+      "tags": ["داغ", "شیر", "قهوه"]
+    },
+    {
+      "id": "p3",
+      "categoryId": "dessert",
+      "name": "Cheesecake",
+      "nameFa": "چیزکیک",
+      "price": 150000,
+      "description": "سبک کلاسیک نیویورکی.",
+      "image": "/assets/images/",
+      "available": false,
+      "tags": ["سرد", "شیرین", "دسر"]
+    }
+  ]
+}
