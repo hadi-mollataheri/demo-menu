@@ -14,36 +14,36 @@
   "products": [
     {
       "id": "p1",
-      "categoryId": "coffee",
+      "categoryId": "tea",
       "name": "Espresso",
-      "nameFa": "اسپرسو",
+      "nameFa": "چای",
       "price": 95000,
-      "description": "تک شات اسپرسوس.",
+      "description": "چای دمی اعلا",
       "image": "/assets/images/",
       "available": true,
-      "tags": ["قهوه", "داغ"]
+      "tags": ["چای"]
     },
     {
       "id": "p2",
       "categoryId": "coffee",
       "name": "Cappuccino",
       "nameFa": "کاپوچینو",
-      "price": 120000,
-      "description": "اسپرسو همراه با شیر داغ.",
+      "price": "120,000",
+      "description": "اسپرسو همراه با شیر داغ",
       "image": "/assets/images",
       "available": true,
-      "tags": ["داغ", "شیر", "قهوه"]
+      "tags": ["قهوه"]
     },
     {
       "id": "p3",
       "categoryId": "dessert",
       "name": "Cheesecake",
       "nameFa": "چیزکیک",
-      "price": 150000,
-      "description": "سبک کلاسیک نیویورکی.",
+      "price": "150,000",
+      "description": "سبک کلاسیک نیویورکی",
       "image": "/assets/images/",
       "available": false,
-      "tags": ["سرد", "شیرین", "دسر"]
+      "tags": ["دسر"]
     }
   ]
 }
