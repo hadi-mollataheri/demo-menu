@@ -44,12 +44,12 @@ export function renderProducts(menu) {
       a.style.color = 'blue';
       a.style.textDecoration = 'underline';
       div.appendChild(a);
-
-      // Add availability
-      const availability_p = document.createElement('p');
-      availability_p.innerHTML = product.available ? 'موجود' : 'ناموجود';
-      div.appendChild(availability_p);
     });
+
+    // Add availability
+    const availability_p = document.createElement('p');
+    availability_p.innerHTML = product.available ? 'موجود' : 'ناموجود';
+    div.appendChild(availability_p);
 
     productsDiv.appendChild(div);
   });
