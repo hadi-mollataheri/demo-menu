@@ -18,7 +18,7 @@
       "name": "Espresso",
       "nameFa": "چای",
       "price": 95000,
-      "description": "چای دمی اعلا",
+      "description": "چای دمی ",
       "image": "/assets/images/",
       "available": true,
       "tags": ["چای"]
