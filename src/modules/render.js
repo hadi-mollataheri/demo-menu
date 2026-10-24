@@ -12,15 +12,15 @@ export function renderProducts(menu) {
     div.id = product.id;
 
     const h2 = document.createElement('h2');
-    h2.innerHTML = product.nameFa;
+    h2.textContent = product.nameFa;
     div.appendChild(h2);
 
     const description_p = document.createElement('p');
-    description_p.innerHTML = product.description;
+    description_p.textContent = product.description;
     div.appendChild(description_p);
 
     const price_p = document.createElement('p');
-    price_p.innerHTML = product.price;
+    price_p.textContent = product.price;
     div.appendChild(price_p);
 
     product.tags.forEach((tag) => {
@@ -39,16 +39,19 @@ export function renderProducts(menu) {
           a.href = '#';
           break;
       }
-      a.innerHTML = tag;
+      a.textContent = tag;
+
       a.style.margin = '5px';
       a.style.color = 'blue';
       a.style.textDecoration = 'underline';
+      // TODO: Replace above styles with tailwind style
+      a.className = '';
       div.appendChild(a);
     });
 
     // Add availability
     const availability_p = document.createElement('p');
-    availability_p.innerHTML = product.available ? 'موجود' : 'ناموجود';
+    availability_p.textContent = product.available ? 'موجود' : 'ناموجود';
     div.appendChild(availability_p);
 
     productsDiv.appendChild(div);
