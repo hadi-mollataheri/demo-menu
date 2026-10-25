@@ -1,3 +1,5 @@
+import { formatPrice } from '../utils/format.js';
+
 export function renderProducts(menu) {
   const products = menu.products;
 
@@ -20,7 +22,7 @@ export function renderProducts(menu) {
     div.appendChild(description_p);
 
     const price_p = document.createElement('p');
-    price_p.textContent = product.price;
+    price_p.textContent = formatPrice(product.price);
     div.appendChild(price_p);
 
     product.tags.forEach((tag) => {
