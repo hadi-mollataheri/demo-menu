@@ -25,20 +25,8 @@ export function renderProducts(menu) {
 
     product.tags.forEach((tag) => {
       const a = document.createElement('a');
-      switch (tag) {
-        case 'قهوه':
-          a.href = 'coffee';
-          break;
-        case 'چای':
-          a.href = 'tea';
-          break;
-        case 'دسر':
-          a.href = 'dessert';
-          break;
-        default:
-          a.href = '#';
-          break;
-      }
+      const category = menu.categories.find((c) => tag === c.nameFa);
+      a.href = category ? `#${category.id}` : '#';
       a.textContent = tag;
 
       a.style.margin = '5px';
