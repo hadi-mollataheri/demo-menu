@@ -19,7 +19,7 @@
       "nameFa": "چای",
       "price": 95000,
       "description": "چای دمی ",
-      "image": "/assets/images/",
+      "image": "/src/assets/images/tea.jpg",
       "available": true,
       "tags": ["چای"]
     },
@@ -30,7 +30,7 @@
       "nameFa": "کاپوچینو",
       "price": 120000,
       "description": "اسپرسو همراه با شیر داغ",
-      "image": "/assets/images",
+      "image": "src/assets/images/cappuccino.jpg",
       "available": true,
       "tags": ["قهوه"]
     },
@@ -41,7 +41,18 @@
       "nameFa": "چیزکیک",
       "price": 150000,
       "description": "سبک کلاسیک نیویورکی",
-      "image": "/assets/images/",
+      "image": "/src/assets/images/cheesecake.jpg",
+      "available": false,
+      "tags": ["دسر"]
+    },
+        {
+      "id": "p3",
+      "categoryId": "dessert",
+      "name": "Cheesecake",
+      "nameFa": "چیزکیک",
+      "price": 150000,
+      "description": "سبک کلاسیک نیویورکی",
+      "image": "/src/assets/images/cheesecake.jpg",
       "available": false,
       "tags": ["دسر"]
     }

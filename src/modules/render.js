@@ -3,19 +3,24 @@ import { formatPrice } from '../utils/format.js';
 export function renderProducts(menu) {
   const products = menu.products;
 
-  // const main = document.querySelector('main');
-
   const productsDiv = document.querySelector('div#products');
 
-  // let product_array_elements = null;
-
   products.forEach((product) => {
+    // Product div
     const div = document.createElement('div');
     div.id = product.id;
+    div.className =
+      'flex flex-col items-center leading-10 bg-gray-200 rounded-xl p-2.5';
 
     const h2 = document.createElement('h2');
     h2.textContent = product.nameFa;
+    h2.className = 'font-bold text-lg';
     div.appendChild(h2);
+
+    const image = document.createElement('img');
+    image.src = product.image;
+    image.className = 'w-64 h-64 object-cover my-3 rounded';
+    div.appendChild(image);
 
     const description_p = document.createElement('p');
     description_p.textContent = product.description;
@@ -42,8 +47,9 @@ export function renderProducts(menu) {
     // Add availability
     const availability_p = document.createElement('p');
     availability_p.textContent = product.available ? 'موجود' : 'ناموجود';
+    availability_p.className = `${product.available ? 'text-green-700' : 'text-red-600'}`;
     div.appendChild(availability_p);
-
+    // Append each product div to products div
     productsDiv.appendChild(div);
   });
 }

@@ -7,12 +7,16 @@
     <link href="/src/style.css" rel="stylesheet" />
     <script type="module" src="/src/main.js" defer></script>
   </head>
-  <body>
-    <header>
+  <body class="m-5">
+    <header class="h-52">
       <nav></nav>
     </header>
-    <main class="">
-      <div id="products"></div>
+    <main class="max-w-5xl mx-auto">
+      <div
+        id="products"
+        class="grid gap-10 justify-items-center-safe lg:grid-cols-4 sm:grid-flow-row sm:auto-cols-fr sm:auto-rows-fr grid-rows-1 grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+        dir="rtl"
+      ></div>
     </main>
     <footer></footer>
   </body>
