@@ -15,7 +15,7 @@
     {
       "id": "p1",
       "categoryId": "tea",
-      "name": "Espresso",
+      "name": "Tea",
       "nameFa": "چای",
       "price": 95000,
       "description": "چای دمی ",
@@ -45,7 +45,7 @@
       "available": false,
       "tags": ["دسر"]
     },
-        {
+    {
       "id": "p3",
       "categoryId": "dessert",
       "name": "Cheesecake",

@@ -1,4 +1,4 @@
-import { renderProducts } from './modules/render.js';
+import { renderApp } from './modules/render.js';
 import menu from './data/menu.json';
 
-renderProducts(menu);
+renderApp(menu.products);
