@@ -32,15 +32,23 @@
         </div>
 
         <div id="quick-filters" class="my-7 flex justify-between">
-          <div id="filters">
+          <div id="filters" class="w-1/2">
             <label for="dropdown-options">فیلتر ها</label>
-            <select id="dropdown-options" class="mr-3">
-              <option value="tea">چای</option>
-              <option value="coffee">قهوه</option>
-              <option value="dessert">دسر</option>
+            <select id="dropdown-options" name="filter">
+              <option
+                value=""
+                selected="selected"
+                disabled
+                class="qFilter-item"
+              >
+                لطفا یک گزینه را انتخاب کنید
+              </option>
+              <option value="tea" class="qFilter-item">چای</option>
+              <option value="coffee" class="qFilter-item">قهوه</option>
+              <option value="dessert" class="qFilter-item">دسر</option>
             </select>
           </div>
-          <div class="availibility-checkbox">
+          <div class="availibility-checkbox" class="w-1/2">
             <label for="availibility-check">فقط موجود</label>
             <input
               id="availibility-check"

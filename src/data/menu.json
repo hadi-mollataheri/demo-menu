@@ -11,6 +11,17 @@
     { "id": "tea", "name": "Tea", "nameFa": "چای" },
     { "id": "dessert", "name": "Desserts", "nameFa": "دسر" }
   ],
+  "filterOptions": [
+    {
+      "value": "",
+      "selected": true,
+      "disabled": true,
+      "content": "لطفا یک گزینه را انتخاب کنید"
+    },
+    { "value": "tea", "content": "چای" },
+    { "value": "coffee", "content": "قهوه" },
+    { "value": "dessert", "content": "دسر" }
+  ],
   "products": [
     {
       "id": "p1",
