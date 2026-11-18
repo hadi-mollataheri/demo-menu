@@ -2,8 +2,14 @@ import { selectCategory } from '../utils/cat-selection.js';
 import menu from '../data/menu.json';
 import { createProductCards } from '../utils/create-product-cards.js';
 
+// All these below lines probably should go in their own function below or modules later.
 // Create a state for category(later type is gonna be array).
 let selected_cat_products_state = null;
+// Create a state for search that stores array of products that are matched with user input
+let search_state = [];
+// Get the paragraph that shows error message when there is no search match
+const notFound_searchError = document.getElementById('search-error');
+
 // Create state for quick filtering(later type is gonna be array).
 let qFilter_state = null;
 // Get select element of the Q-filters
@@ -67,6 +73,57 @@ function renderCatTabs() {
   ul.appendChild(makeCatTab('all', 'همه'));
 }
 
+// TODO: Add logic for when no product matches to user input witch should render an appropriate message
+// Search behavior should re-render the products container
+// Search filter is live and shows only "products whose name matches the user input" with
+// "search render debounce or delay of 200ms"
+// As soon as user starts to type there will be A small clear(×) button inside the search
+//  input that clears user input that in effect to that all products
+// should be rendered
+// Nothing else changes
+
+const searchProducts = () => {
+  // Get search input
+  const searchInput = document.getElementById('search');
+  // Create a timeoutID variable
+  let timeoutID;
+  // Create user input variable
+  let userInput = '';
+  // Create render error message for when there is no match for user input search
+  const renderSearchError = () => {
+    notFound_searchError.textContent = '';
+    notFound_searchError.textContent = 'محصولی یافت نشد!';
+    notFound_searchError.className = 'text-red-500';
+  };
+  // Create search change event listener and handler
+  searchInput.addEventListener('input', ({ target }) => {
+    search_state = [];
+    // Clear timeoutID
+    clearTimeout(timeoutID);
+    // This part should have an 200ms delay
+    timeoutID = setTimeout(() => {
+      userInput = target.value.trim();
+      menu.products.forEach((product) => {
+        if (!userInput || product.nameFa.includes(userInput)) {
+          search_state.push(product);
+        }
+      });
+      // If search state was empty
+      if (search_state.length === 0) {
+        // Render not found error message.
+        renderSearchError();
+        // Render all the product so consistency remain intact.
+        renderProducts(menu.products);
+      } else {
+        // Otherwise reset the error message
+        notFound_searchError.textContent = '';
+        // Render products that have been matched with user input
+        renderProducts(search_state);
+      }
+    }, 200);
+  });
+};
+
 const renderProducts = (products) => {
   const main = document.querySelector('main');
   // Create a div container for all the products
@@ -81,7 +138,8 @@ const renderProducts = (products) => {
   });
 };
 
-export function renderApp() {
+export function renderApp(products) {
   renderCatTabs();
-  renderProducts(selected_cat_products_state || menu.products);
+  renderProducts(selected_cat_products_state || products);
+  searchProducts();
 }
